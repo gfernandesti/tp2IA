@@ -1,0 +1,55 @@
+% 1. Title: GCMNíveisdeCarreira
+% 
+% 2. Sources:
+%      (a) Creator: Gabriel R. Fernandes, Edmilson S. Silva
+%      (b) Donor: Gabriel R. Fernandes, Edmilson S. Silva
+%      (c) Date: April, 2015
+% 
+% 3. Relevant Information:
+%    --- Um banco de dados .arff para detectar em qual nível de 
+%carreira o guarda civil municipal se encontra. O objetivo
+%principal, é que o algoritmo classificador forneça uma base com %os perfis de carreira dos guardas para auxiliar a administração %pública no controle de abertura de concurso interno.
+%
+% 5. Number of Instances: 15 (5 in each of three classes)
+% 
+% 6. Number of Attributes: 4 numeric, predictive attributes and the class
+% 
+% 7. Attribute Information:
+%    1. salario in currency
+%    2. temposerviço in years
+%    3. idade length in years
+%    4. class: 
+%       -- GCMNivelI
+%       -- GCMNivelII
+%       -- GCMNivelIII
+% 
+% 8. Missing Attribute Values: None
+% 
+% 9. Class Distribution: 33.3% for each of 3 classes.
+
+@RELATION GCMNíveisdeCarreira
+
+@ATTRIBUTE salario	REAL
+@ATTRIBUTE temposerviço 	NUMERIC
+@ATTRIBUTE idade 	NUMERIC
+@ATTRIBUTE class 	{GCMNivelI,GCMNivelII,GCMNivelIII}
+
+@DATA
+1300.07,0,18,GCMNivelI
+1345.57,2,20,GCMNivelI
+1392.66,3,21,GCMNivelI
+1441.04,5,22,GCMNivelI
+1491.84,4,23,GCMNivelI
+1544.41,5,24,GCMNivelII
+1598.62,7,25,GCMNivelII
+1654.03,6,26,GCMNivelII
+1711.40,9,26,GCMNivelII
+1771.91,10,27,GCMNivelII
+1833.40,11,28,GCMNivelIII
+1898.30,13,29,GCMNivelIII
+1964.44,15,27,GCMNivelIII
+2033.30,12,30,GCMNivelIII
+2104.80,12,31,GCMNivelIII
+%
+%
+%
