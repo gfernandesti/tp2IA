@@ -1,0 +1,51 @@
+% 1. Title: NaipedeInstrumentosMusicais
+% 
+% 2. Sources:
+%      (a) Creator: Edmilson S. Silva, Gabriel R. Fernandes
+%      (b) Donor: Edmilson S. Silva, Gabriel R. Fernandes
+%      (c) Date: April, 2015
+% 
+% 3. Relevant Information:
+%    --- Um banco de dados .arff para detectar de qual família %(naipe) pertence um instrumento musical. O objetivo é auxiliar 
+%iniciantes na música a distinguirem a variedade de instrumentos %e seus grupos. 
+% 5. Number of Instances: 9 (3 in metal and 2 each other classes)
+% 
+% 6. Number of Attributes: numeric, 6 predictive attributes and the class
+% 
+% 7. Attribute Information:
+%    1. corda in boolean
+%    2. metal in boolean
+%    3. madeira in boolean
+%    4. palheta in boolean
+%    5. pistos in boolean
+%    6. chaves in boolean
+%    7. class: 
+%       -- CORDAS
+%       -- METAIS
+%       -- MADEIRA
+%       -- SAX
+% 
+% 8. Missing Attribute Values: None
+% 
+% 9. Class Distribution: 30.0% im metal class and 23.3% for each other classes.
+
+@relation NaipedeInstrumentosMusicais
+
+@attribute 'corda' {yes,no}
+@attribute 'metal' {yes,no}
+@attribute 'madeira' {yes,no}
+@attribute 'palheta' {yes,no}
+@attribute 'pistos' {yes,no}
+@attribute 'chaves' {yes,no}
+@attribute 'class' {CORDAS,METAIS,MADEIRA,SAX}
+
+@data
+no,no,yes,yes,no,yes,MADEIRA
+no,yes,no,yes,no,yes,SAX
+no,yes,no,no,yes,no,METAIS
+yes,no,yes,no,no,no,CORDAS
+no,no,yes,no,no,yes,MADEIRA
+no,yes,no,no,yes,no,METAIS
+yes,no,yes,no,no,no,CORDAS
+no,yes,no,no,no,yes,MADEIRA
+no,yes,no,yes,no,yes,SAX

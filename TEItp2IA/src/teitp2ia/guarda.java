@@ -23,19 +23,19 @@ public class guarda {
      */
     public static void main(String[] args) throws Exception {
         // TODO code application logic here
-        		// Lendo os exemplos a partir do arquivo iris.arff
+        		// Lendo os exemplos a partir do arquivo guarda.arff
 		FileReader leitor = new FileReader("guarda.arff");
-		Instances iris = new Instances(leitor);
+		Instances guarda = new Instances(leitor);
 		
 		// Definindo o índice do atributo classe (último atributo do conjunto)
-		iris.setClassIndex(iris.numAttributes() - 1);
+		guarda.setClassIndex(guarda.numAttributes() - 1);
 		
 		// Criando uma nova base com os exemplos embaralhados 
-		iris = iris.resample(new Random());			
+		guarda = guarda.resample(new Random());			
 		
 		// Abordagem Hold out de validação cruzada 
-		Instances baseTeste = iris.testCV(3, 0); // Obtendo subconjunto para testes
-		Instances baseTreino = iris.trainCV(3, 0); // Obtendo subconjunto para treinamento
+		Instances baseTeste = guarda.testCV(3, 0); // Obtendo subconjunto para testes
+		Instances baseTreino = guarda.trainCV(3, 0); // Obtendo subconjunto para treinamento
 		
 		// Criando os classificadores que serão avaliados
 		IBk knn = new IBk(3); // knn com 3 vizinhos
